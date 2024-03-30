@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+  broker-service:
+    image: shoaibazhar786/broker-service:1.0.0
+    ports:
+      -"8080:80"
+    deploy:
+      mode: replicated
+      replicas: 1
+
+    listener-service:
+      image: shoaibazhar786/listener-service:1.0.0
+      deploy:
+        mode: replicated
+        replicas: 1
+    
+    authentication-service:
+      image: shoaibazhar786/authentication-service:1.0.0
+      deploy:
+        mode: replicated
+      environment:
+        DSN: host=postgres port=5432 user=postgres password=password dbname=users sslmode=disable timezone=UTC connect_timeout=5"
