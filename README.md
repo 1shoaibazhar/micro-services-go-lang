@@ -1,7 +1,5 @@
 # Go Microservices Repository
 
-![Go Lang Logo](https://golang.org/lib/godoc/images/go-logo-blue.svg)
-
 This repository contains a collection of microservices implemented in Go Lang. Each microservice serves a specific purpose within a larger application architecture.
 
 ## Microservices Overview
